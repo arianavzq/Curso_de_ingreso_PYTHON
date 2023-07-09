@@ -63,7 +63,17 @@ class App(customtkinter.CTk):
         self.btn_calcular.grid(row=3, pady=10, columnspan=2, sticky="nsew")
 
     def btn_calcular_on_click(self):
-        pass
+        largo=self.txt_largo.get()
+        ancho=self.txt_ancho.get()
+        metros_cuadrados= int(largo)*int(ancho)
+        metros_lineales= int(largo)*2 + int(ancho)*2
+        cantidad_de_postes = 4+(metros_lineales/250)
+        cantidad_varillas = metros_lineales/2
+
+
+
+        mesage=f"Los metros cuadrados son {metros_cuadrados} y los metros lineales son {metros_lineales}, Cantidad depostes que debera utilizar es: {round(cantidad_de_postes)}, la cantidad de varillas que debera usar es: {round(cantidad_varillas)}"
+        alert(title="Resultado Total",message=mesage)
 
 
 if __name__ == "__main__":
