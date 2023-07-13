@@ -42,7 +42,12 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
-        pass
+        importe =self.txt_importe.get()
+        descuento=self.txt_descuento.get()
+        resultado= int(importe)*int(descuento)/100
+
+        alert(title="cuenta", message=f"el precio con descuento es de {resultado}")
+
 
 
 if __name__ == "__main__":

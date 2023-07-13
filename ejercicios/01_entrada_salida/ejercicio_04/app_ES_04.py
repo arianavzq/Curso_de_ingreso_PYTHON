@@ -34,7 +34,9 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        nombre = prompt(title="ingresar datos", prompt="Nombre")
+        self.txt_nombre.delete(0,9)
+        self.txt_nombre.insert(1,nombre)
         
     
 if __name__ == "__main__":
